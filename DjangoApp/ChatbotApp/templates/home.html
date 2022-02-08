@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health Is Wealth</title>
+  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/style.css' %}">
+  <!-- =======================================================
+    Theme Name: Medilab
+    Theme URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+<!-- <style>
+    .banner-info {
+    padding-top: 190px;
+    margin-left: 28%;
+} -->
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!--banner-->
+    <section id="banner" class="banner">
+      <div class="bg-color">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="col-md-12">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                <a class="navbar-brand" href="#"><img src="{% static 'homepage/img/logo3.png' %}" class="img-responsive" style="width: 60px; height:51px; margin-top: -16px;"></a>
+              </div>
+              <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class=""><a href="#banner">Home</a></li>
+                  <li class=""><a href="#service">Services</a></li>
+                  <li class=""><a href="#about">About</a></li>
+                  <li class=""><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+          <div class="row">
+            <div class="banner-info">
+              <div class="banner-logo text-center">
+                <img src="{% static 'homepage/img/logo3.png' %}" style="height:100px; width:220px;" class="img-responsive">
+              </div>
+              <div class="banner-text text-center">
+                <h1 class="white">HEALTHCARE AT YOUR HOME</h1>
+                <p>It is a small web app to check health online.</p>
+                <p>I hope you will like it.</p>
+              </div>
+              <div class="overlay-detail text-center">
+                <a href="#service"><i class="fa fa-angle-down"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="service" class="section-padding">
+  <!-- <section id="service" class="section-padding"> -->
+    <!-- <a href="/service"></a> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <h2 class="ser-title">Our Services</h2>
+          <hr class="botm-line">
+          <p>We provide services such as Covid Chatbot, Brain stroke prediction etc. I hope I will grow it more.</p>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <a href="{% url 'chatbot' %}"><i class="fas fa-viruses"></i></a>
+            </div>
+            <div class="icon-info">
+              <h4>Covid Chatbot </h4>
+              <p>It is a chabot from which you can ask anything about COVID-19. It will answer your all queries about Covid. </p>
+            </div>
+          </div>
+          <div class="service-info">
+            <div class="icon">
+              <a href="{% url 'chatbot2' %}"><i class="fas fa-comment-alt"></i></a>
+            </div>
+            <div class="icon-info">
+              <h4>All Disease Chatbot</h4>
+              <p>A chatbot that can predict diseases by knowing symptoms from you. It can also tell you description, precautions and symptoms of several diseases.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <a href="{% url 'corona_Xray' %}"><i class="fas fa-lungs-virus"></i></a>
+            </div>
+            <div class="icon-info">
+              <h4>Corona Virus Prediction</h4>
+              <p>This model will predict whether a chest X-ray have corona virus or not. You just have to upload the image of chest X-ray.</p>
+            </div>
+          </div>
+          <div class="service-info">
+            <!-- <div class="icon">
+              <a href="{% url 'home' %}"><i class="fas fa-head-side-virus"></i></a>
+            </div>
+            <div class="icon-info">
+              <h4>Brain Tumor Prediction</h4>
+              <p>This model will predict whether a brain MRI have tumor or not. You just have to upload the image of Brain MRI.</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </section> -->
+  </div>
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="section-title">
+            <h2 class="head-title lg-line">The Health Is Wealth team<br>Goals</h2>
+            <hr class="botm-line">
+            <p class="sec-para">We want to make health care system better and cheap. Our dream is to bring hospital at your home. We know it is not completely possible but we can try to do so.</p>
+            <!-- <a href="" style="color: hsl(179, 88%, 38%); padding-top:10px;">Know more..</a> -->
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+          <div style="visibility: visible;" class="col-sm-9 more-features-box">
+            <div class="more-features-box-text">
+              <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+              <div class="more-features-box-text-description">
+                <h3>Important thing to know before you use this app.</h3>
+                <p>It work completely on machine learning models and as you know machines are not 100% correct. So, please contact you doctor if you have serious symptoms.</p>
+              </div>
+            </div>
+            <div class="more-features-box-text">
+              <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+              <div class="more-features-box-text-description">
+                <h3>This app is little bit slow.</h3>
+                <p>When you give your data to model to predict something then it will take some time to predict it. So, do not loose your patience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div id="cta-2" class="section-padding">
+    <div class="container">
+      <div class=" row">
+        <div class="col-md-2"></div>
+        <div class="text-right-md col-md-4 col-sm-4">
+          <h2 class="section-title white lg-line">« A few words<br> about us »</h2>
+        </div>
+        <div class="col-md-4 col-sm-5">
+          "We are students who are learning to make this world a better place to live."
+          <p class="text-right text-primary"><i>— Health Is Wealth</i></p>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!--cta-->
+  <!--contact-->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="ser-title">Contact us</h2>
+          <hr class="botm-line">
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <h3>Contact Info</h3>
+          <div class="space"></div>
+          <!-- <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>321 Awesome Street<br> New York, NY 17022</p>
+          <div class="space"></div> -->
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>goyaljatin310@gmail.com</p>
+          <div class="space"></div>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+91 8168991401</p>
+        </div>
+        <div class="col-md-8 col-sm-8 marb20">
+          <div class="contact-info">
+            <h3 class="cnt-ttl">Have something to say.... just say</h3>
+            <div class="space"></div>
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="POST" role="form" class="">
+              {% csrf_token %}
+              <div class="form-group">
+                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+
+              <div class="form-action">
+                <button type="submit" class="btn btn-form">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--footer-->
+<footer id="footer">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Thank You</h4>
+            </div>
+            <div class="info-sec">
+              <p>If you like this app please come again.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Quick Links</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="quick-info">
+                <li><a href="{% url 'home' %}"><i class="fa fa-circle"></i>Home</a></li>
+                <li><a href="#service"><i class="fa fa-circle"></i>Services</a></li>
+                <li><a href="#contact"><i class="fa fa-circle"></i>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Follow us</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="social-icon">
+                <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
+                <li class="bgred"><i class="fa fa-google-plus"></i></li>
+                <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
+                <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            © Copyright Health Is Wealth team. All Rights Reserved
+            <div class="credits">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ footer-->
+<script src="{% static 'homepage/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'homepage/js/jquery.min.js' %}"></script>
+  <script src="{% static 'homepage/js/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'homepage/js/custom.js' %}"></script>
+  <script src="{% static 'homepage/contactform/contactform.js' %}"></script>
+  
+  <!-- Vendor JS-->
+  <!-- <script src="{% static 'vendor/select2/select2.min.js' %}"></script> -->
+  <!-- <script src="{% static 'vendor/datepicker/moment.min.js' %}"></script>
+  <script src="{% static 'vendor/datepicker/daterangepicker.js' %}"></script>
+
+   Main JS-->
+  <!-- <script src="{% static 'js/global.js' %}"></script> -->
+  
+
+</body>
+
+</html>

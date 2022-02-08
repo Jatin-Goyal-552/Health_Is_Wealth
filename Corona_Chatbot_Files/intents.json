@@ -1,0 +1,376 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi there",
+          "Is anyone there?",
+          "Hey",
+          "Hola",
+          "Hello",
+          "Good day"
+        ],
+        "responses": [
+          "Hello, thanks for asking.",
+          "Hi, Thanks for asking me.",
+          "hello, I am here."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "condition",
+        "patterns": [
+          "How are you doing.",
+          "How are you.",
+          "what is going up?"
+        ],
+        "responses": [
+          "I am fine, thank you.",
+          "I am good thanks for asking me.",
+          "I am doing good."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+          "Bye",
+          "See you later",
+          "Goodbye",
+          "Nice chatting to you, bye",
+          "Till next time"
+        ],
+        "responses": [
+          "See you!, I hope you will come again.",
+          "Have a nice day",
+          "Bye! Come back again soon.",
+          "Bye! Thanks for chating with me."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "thanks",
+        "patterns": [
+          "Thanks",
+          "Thank you",
+          "That's helpful",
+          "Awesome, thanks",
+          "Thanks for helping me"
+        ],
+        "responses": ["Happy to help!", "Any time!", "My pleasure."],
+        "context": [""]
+      },
+      {
+        "tag": "name",
+        "patterns": [
+          "What is your name",
+          "What should i call you",
+          "Do you have any name"
+        ],
+        "responses": [
+          "I am your health buddy, HealthyChatBot.",
+          "My name is HealthyChatbot.",
+          "You can call me HealthyChatBot."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "What is corona",
+        "patterns": [
+        "What is a coronavirus?",
+        "Can you tell me What is a coronavirus?",
+        "Describe What is a coronavirus?",
+        "Describe me coronavirus?",
+        "What is a covid?",
+        "What is covid 19?"
+        ],
+        "responses": [
+          "Coronaviruses are a large family of viruses which may cause illness in animals or humans. ",
+          "In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases.",
+          "COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "What is symptoms",
+        "patterns": [
+        "What are the symptoms of COVID-19?",
+        "Can you tell me What are the symptoms of COVID-19?",
+        "Describe What are the symptoms of COVID-19",
+        "Describe me What are the symptoms of COVID-19?",
+        "What is are covid symptoms?",
+        "What is covid 19 symptoms?"
+        ],
+        "responses": [
+          "The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but don't develop any symptoms and don't feel unwell. Most people (about 80%) recover from the disease without needing special treatment.",
+          "",
+          "The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Older people, and those with underlying medical problems like high blood pressure, heart problems or diabetes, are more likely to develop serious illness. People with fever, cough and difficulty breathing should seek medical attention.",
+          "The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "How does COVID-19 spread?",
+        "patterns": [
+        "How does COVID-19 spread?",
+        "Can you tell How does COVID-19 spread?",
+        "Describe How does COVID-19 spread?",
+        "Describe me How does COVID-19 spread?",
+        "How does corona spread??",
+        "What is covid 19 symptoms?"
+        ],
+        "responses": [
+          "People can catch COVID-19 from others who have the virus. The disease can spread from person to person through small droplets from the nose or mouth which are spread when a person with COVID-19 coughs or exhales. ",
+          "People can also catch COVID-19 if they breathe in droplets from a person with COVID-19 who coughs out or exhales droplets. This is why it is important to stay more than 1 meter (3 feet) away from a person who is sick."
+          
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Can the virus that causes COVID-19 be transmitted through the air?",
+        "patterns": [
+        "Can the virus that causes COVID-19 be transmitted through the air?",
+        "Can you tell Can the virus that causes COVID-19 be transmitted through the air?",
+        "Can the virus transmitted through the air?",
+        "can covid spread through air?"
+        ],
+        "responses": [
+          "Studies to date suggest that the virus that causes COVID-19 is mainly transmitted through contact with respiratory droplets rather than through the air.",
+          "People can also catch COVID-19 if they breathe in droplets from a person with COVID-19 who coughs out or exhales droplets. This is why it is important to stay more than 1 meter (3 feet) away from a person who is sick."
+          
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "What can I do to protect myself and prevent the spread of disease?",
+        "patterns": [
+        "What can I do to protect myself and prevent the spread of disease?",
+        "Can you tell What can I do to protect myself and prevent the spread of disease?",
+        "how be protected from corona?",
+        "how to stay safe from covid-19?",
+        "what precaution to take to be safe from covid?",
+        "how can i reamin safe from covid?"
+        ],
+        "responses": [
+          "Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water.",
+          "Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. Avoid touching eyes, nose and mouth.",
+          "Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately.",
+          "Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention and call in advance. Follow the directions of your local health authority.",
+          "If possible, avoid traveling to places especially if you are an older person or have diabetes, heart or lung disease. Keep up to date on the latest COVID-19 hotspots (cities or local areas where COVID-19 is spreading widely)."
+          
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Should I worry about COVID-19",
+        "patterns": [
+        "Should I worry about COVID-19",
+        "do i need to worry about corona?",
+        "Should i be afraid of corona?",
+        "Should i scare from covid",
+        "Is covid dangerous?",
+        " is covid harmful"
+        ],
+        "responses": [
+          "Illness due to COVID-19 infection is generally mild, especially for children and young adults. However, it can cause serious illness: about 1 in every 5 people who catch it need hospital care but We can channel our concerns into actions to protect ourselves, our loved ones and our communities."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Who is at risk of developing severe illness?",
+        "patterns": [
+        "Who is at risk of developing severe illness?",
+        "Which people are at risk from covid?",
+        "covid is dangerous for which people?",
+        "what type of people need to be alert for covid?",
+        "what people should be on alert from covid?"
+        ],
+        "responses": [
+          "While we are still learning about how COVID-2019 affects people, older persons and persons with pre-existing medical conditions (such as high blood pressure, heart disease, lung disease, cancer or diabetes)  appear to develop serious illness more often than others. "
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Are antibiotics effective in preventing or treating the COVID-19?",
+        "patterns": [
+        "Are antibiotics effective in preventing or treating the COVID-19?",
+        "Are there any medicines or therapies that can prevent or cure COVID-19?",
+        "can covid be cure from some medicines?",
+        "Can we be protect from covid by using some medicine?",
+        "Is there any type of drug for covid?"
+        ],
+        "responses": [
+            "Yes , there is made in India vaccine for Covid named Covishield."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Is there a vaccine, drug or treatment for COVID-19?",
+        "patterns": [
+        "Is there a vaccine, drug or treatment for COVID-19?",
+      
+        "can covid be cure from some medicines?",
+        "Can we be protect from covid by using some medicine?",
+        "Is there any type of drug for covid?"
+        ],
+        "responses": [
+          "Yes , there is made in India vaccine for corona named covishield."
+        ],
+        "context": [""]
+      }
+      ,
+      {
+        "tag": "How are Covid-19 and influenza viruses different?",
+        "patterns": [
+        "Is covid-19 different from seasonal viruses",
+        " is covid same as other viruses",
+        "Difference between covid-19 and seasonal viruses"
+        ],
+        "responses": [
+          "Mortality for COVID-19 appears higher then for other viruses."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Is covid-19 dangerous for tabocco users?",
+        "patterns": [
+        "Is tabacco users at higher risk for covid-19?",
+        "Is smokers users at higher risk for covid-19?",
+        "Is tabacco and smokers users are in danger zone for covid-19?",
+        "Is Covid-19 safe for tabacco and smokers?",
+        "Is there is any harm for tabacco and smokers?"
+        ],
+        "responses": [
+          "Yes,tabacco and smokers are not safe.",
+          "Yes,It is dangerous for tabacco and smokers."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Is covid-19 dangerous for newborn baby?",
+        "patterns": [
+        "Can I touch newborn baby if i am covid-19 positive?",
+        "Is it safe for newborn baby?",
+        "Can I hold my newborn baby?",
+        "Can I touch and hold my newborn baby?"
+        ],
+        "responses": [
+          "Yes. Close contact and early, exclusive breastfeeding helps a baby to thrive."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Can women with covid-19 breastfeed?",
+        "patterns": [
+        "Can women with covid-19 breastfeed?",
+        "I am covid-19 positive can i breastfeed my newborn baby?"
+        ],
+        "responses": [
+          "Yes,Women with covid-19 can breastfeed if they wish to do so."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "unborn baby?",
+        "patterns": [
+        "Can women with covid-19 is harmfull for unborn baby?",
+        "Can covid-19 be passed from a women to her unborn baby?",
+        "Is corona harmful for unborn baby",
+        "Should i worry about my unborn baby?"
+        ],
+        "responses": [
+          "There is also no evidence of vertical transmission, which refers to the ability of the virus to pass to your unborn baby during pregnancy."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Safety?",
+        "patterns": [
+        "Is there anything i should not do?",
+        "what should not i do?"
+        ],
+        "responses": [
+          "You should not do smoking.",
+          "You should not take antibiotics.",
+          "You should not take other medicine with consult to doctor.",
+          "You should not wear multiple mask."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "What should i do?",
+        "patterns": [
+        "What should i do to incease my imunity?",
+        "what should i do to keep safe from covid-19 virus?",
+        "how to increase imunity ?",
+        "What can i do to incease to my imunity?"
+        ],
+        "responses": [
+          "Take vaccination, eat healty food, drink more water and excersie regularly"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "duration",
+        "patterns": [
+        "Vaccine dose duration",
+        "What is the duration of vaccine doses.",
+        "can you please tell me what is the time duration of covid vaccine"
+        ],
+        "responses": [
+          "Covid-19 vaccination duration may differ from 30 days to 90 days."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Varient",
+        "patterns": [
+        "What is current variants of corona virus",
+        "how many variant of corona virus has come",
+        "corona variant",
+        "name corona variant"
+        ],
+        "responses": [
+          "Covid-19 varients are - Delta,Alpha,Gamma,Beta. Now currently Omicron varient is spreding in the whole world."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Covid-19 positive",
+        "patterns": [
+        "What should i do if i am covid positive",
+        "can you please tell me what should i do if i am covid positive",
+        "corona positive"
+        ],
+        "responses": [
+          "Self isolate, wear mask, avoid contact with others, eat healthy food and do some yoga."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "mild corona",
+        "patterns": [
+        "if i have mild symptoms what should i do",
+        "mild symptoms",
+        "can we recover at home if i have mild corona symptoms"
+        ],
+        "responses": [
+          "If you have corona symptoms for like 4-5 days.Monitor yourself at home because it will take up to 14 days to show full symptoms.you can recover at home if you have mild symptoms."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "Quarantine",
+        "patterns": [
+        "how muchh is Covid 19 quarantine",
+        "for how many days is quarantine duration",
+        "quarantine period"
+        ],
+        "responses": [
+          "normally WHO suggest 14 days quarantine."
+        ],
+        "context": [""]
+      }
+      
+    ]
+  }
