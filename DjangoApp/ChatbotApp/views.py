@@ -134,7 +134,7 @@ def xray(request):
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         sleep(5)
         image_location=os.path.join("media",url)
-        model=keras.models.load_model("C://Users//LENOVO//projects//TRI Nit Hackathon//notebook//corona_model.h5")
+        model=keras.models.load_model("..//Corona_Xray_Files//corona_model.h5")
         img = load_img(image_location, grayscale=False, target_size=(150, 150,3))
         img = img_to_array(img)
         img= img.reshape(1, 150, 150, 3)

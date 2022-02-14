@@ -20,8 +20,9 @@ classes = pickle.load(open('..//All_Disease_Chatbot_Files//classes.pkl','rb'))
 df_description = pd.read_csv("..//Disease_Prediction_Files//DiseaseData//symptom_Description.csv")
 df_precautions = pd.read_csv("..//Disease_Prediction_Files//DiseaseData//symptom_precaution.csv")
 df_symptoms = pd.read_csv("..//Disease_Prediction_Files//DiseaseData//dataset.csv")
-
-
+df_description['Disease'] = df_description['Disease'].apply(lambda x : x.lower())
+df_precautions['Disease'] = df_precautions['Disease'].apply(lambda x : x.lower())
+df_symptoms['Disease'] = df_symptoms['Disease'].apply(lambda x : x.lower())
 
 print("---------------------You are set to go.--------------------------")
 
@@ -93,6 +94,7 @@ def predict_chat(request):
     
     if request.method == 'POST':
         chat = request.POST['operation']
+        chat = chat.lower()
         pred, tag = chatbot_response(chat)
         temp = ""
         
@@ -115,7 +117,7 @@ def predict_chat(request):
         
         
         elif tag == "what":
-            chat = chat.split(' ')
+            chat = chat.lower().split(' ')
             all_disease=df_description['Disease'].values.tolist()
             lst=[]
             find_disease=False
@@ -268,7 +270,7 @@ def predict_chat(request):
         
         elif tag=="tell_precautions":
             df_precautions=df_precautions.fillna('')
-            temp_disease=temp_disease[0].upper()+temp_disease[1:]
+            temp_disease=temp_disease.lower()
             precautions=str(df_precautions[df_precautions['Disease']==temp_disease]['Precaution_1'].values[0]+", "+df_precautions[df_precautions['Disease']==temp_disease]['Precaution_2'].values[0]+", "+df_precautions[df_precautions['Disease']==temp_disease]['Precaution_3'].values[0]+" and  "+df_precautions[df_precautions['Disease']== temp_disease]['Precaution_4'].values[0])
             precautions="You should take precaution like "+precautions
             return HttpResponse(json.dumps({'ans':precautions}), content_type="application/json")
@@ -276,7 +278,7 @@ def predict_chat(request):
         
         
         elif tag=="tell_description":
-            temp_disease=temp_disease[0].upper()+temp_disease[1:]
+            temp_disease=temp_disease.lower()
             description=str(df_description[df_description['Disease']==temp_disease]['Description'].values[0])
             return HttpResponse(json.dumps({'ans':description}), content_type="application/json")
         
