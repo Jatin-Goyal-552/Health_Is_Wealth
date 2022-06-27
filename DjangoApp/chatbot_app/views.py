@@ -235,15 +235,15 @@ def predict_chat(request):
 
 
         elif tag=="no_symptoms":
-            temp=all_symptoms.split(",")
-            all_symptoms=''
-            for symptom in temp:
-                symptom=symptom.strip()
-                symptom=symptom.split(' ')
-                all_symptoms+="_".join(symptom)
-                all_symptoms+=' '
-            chat=all_symptoms
-            symptoms=chat.split(',')
+            # temp=all_symptoms.split(",")
+            # all_symptoms=
+            # for symptom in temp:
+            #     symptom=symptom.strip()
+            #     symptom=symptom.split(' ')
+            #     all_symptoms+="_".join(symptom)
+            #     all_symptoms+=' '
+            # chat=temp
+            symptoms=all_symptoms.split(',')
             symptoms=" ".join(symptoms)
             test=clean(symptoms)
             test=[test]
