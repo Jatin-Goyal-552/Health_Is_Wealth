@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/font-awesome.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/bootstrap.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'form/css/style.css' %}">
   <!-- =======================================================
     Theme Name: Medilab
     Theme URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
@@ -66,10 +67,7 @@
         border-radius: 15px;
       }
       
-      /*.chatlog {
-        font: 15px arial, sans-serif;
-      }
-      */
+    
       #chatbox {
         color: #026fc2;
         font: 24px arial, sans-serif;
@@ -111,6 +109,49 @@
 .show {
     display:block;
 }
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 30px;
+}
+.top-footer {
+  margin-top: -30px;
+  padding: 40px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.bg-color {
+  background-color: RGBA(13, 70, 83, 0.78);
+  min-height: 100px;
+}
+.bg-hero:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background: white;
+  opacity: .7;
+  z-index: -1;
+}
+
+.heading-section {
+  font-size: 26px;
+  color: #000000;
+  font-family: monospace;
+  font-weight: 700;
+}
+.btn.btn-primary {
+  background: #1089ff !important;
+  border-color: #1089ff !important;
+  color: #fff;
+  margin-left: 43%;
+  width: 13%;
+  margin-top: 2%;
+}
 </style>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <!--banner-->
@@ -125,224 +166,118 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-              <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'homepage/img/logo3.png' %}" class="img-responsive" style="width: 60px; height:51px; margin-top: -16px;"></a>
+              <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'homepage/img/logo3.png' %}" class="img-responsive" style="width: 60px; height:51px; margin-top: 15px;"></a>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
                 <li class=""><a href="{% url 'home' %}">Home</a></li>
-                <!-- <li class=""><a href="#service">Services</a></li>
-                <li class=""><a href="#about">About</a></li>
-                <li class=""><a href="#contact">Contact</a></li> -->
+                
               </ul>
             </div>
           </div>
         </div>
       </nav>
-      <!-- <div class="container">
-        <div class="row">
-          <div class="banner-info">
-            <div class="banner-logo text-center">
-              <img src="{% static 'homepage/img/logo3.png' %}" style="height:100px; width:220px;" class="img-responsive">
-            </div>
-            <div class="banner-text text-center">
-              <h1 class="white">HEALTHCARE AT YOUR HOME</h1>
-              <p>It is a small web app to check health online.</p>
-              <p>I hope you will like it.</p>
-            </div>
-            <div class="overlay-detail text-center">
-              <a href="#service"><i class="fa fa-angle-down"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>-->
+      
     </div> 
   </section>
-    <div id='bodybox'>
-        <div id='chatborder' style="overflow: scroll;">
-          <input type="text" name="chat" id="chatbox" placeholder="Hi there, I am All Disease Chabot! Type here to talk to me." onfocus="placeHolder()">
-          <!-- <p><button type="button" onclick="runSpeechRecognition()">Speech to Text</button> &nbsp; <span id="action"></span></p>
-        <div id="output" class="hide"></div> -->
-          <p id="chatlog1" class="chatlog">&nbsp;</p>
-          <p id="chatlog2" class="chatlog">&nbsp;</p>
-          <p id="chatlog3" class="chatlog">&nbsp;</p>
-          <p id="chatlog4" class="chatlog">&nbsp;</p>
-          <p id="chatlog5" class="chatlog">&nbsp;</p>
-          <p id="chatlog6" class="chatlog">&nbsp;</p>
-          <p id="chatlog7" class="chatlog">&nbsp;</p>
-          <p id="chatlog8" class="chatlog">&nbsp;</p>
-          <p id="chatlog9" class="chatlog">&nbsp;</p>
-          <p id="chatlog10" class="chatlog">&nbsp;</p>
-          <p id="chatlog11" class="chatlog">&nbsp;</p>
-          <p id="chatlog12" class="chatlog">&nbsp;</p>
-          <p id="chatlog13" class="chatlog">&nbsp;</p>
-          <p id="chatlog14" class="chatlog">&nbsp;</p>
-          <p id="chatlog15" class="chatlog">&nbsp;</p>
-          <p id="chatlog16" class="chatlog">&nbsp;</p>
-          <p id="chatlog17" class="chatlog">&nbsp;</p>
-          <p id="chatlog18" class="chatlog">&nbsp;</p>
-          <p id="chatlog19" class="chatlog">&nbsp;</p>
-          <p id="chatlog20" class="chatlog">&nbsp;</p>
-          <p id="chatlog21" class="chatlog">&nbsp;</p>
-          <p id="chatlog22" class="chatlog">&nbsp;</p>
-          <p id="chatlog23" class="chatlog">&nbsp;</p>
-          <p id="chatlog24" class="chatlog">&nbsp;</p>
-          <p id="chatlog25" class="chatlog">&nbsp;</p>
-          <p id="chatlog26" class="chatlog">&nbsp;</p>
-          <p id="chatlog27" class="chatlog">&nbsp;</p>
-          <p id="chatlog28" class="chatlog">&nbsp;</p>
-          <p id="chatlog29" class="chatlog">&nbsp;</p>
-        </div>
-        <br>
-        <br>
-    </div>
-<form>
-    {% csrf_token %}
-</form>
-
-<script>
-    //links
-//http://eloquentjavascript.net/09_regexp.html
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
-
-
-var messages = [], //array that hold the record of each string in chat
-lastUserMessage = "", //keeps track of the most recent input string from the user
-botMessage = "", //var keeps track of what the chatbot is going to say
-botName = 'Chatbot', //name of the chatbot
-talking = true; //when false the speach function doesn't work
-ans=''
-//
-//
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//edit this function to change what the chatbot says
-
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//****************************************************************
-//
-//
-//
-//this runs each time enter is pressed.
-//It controls the overall input and output
-function runSpeechRecognition() {
-  // get output div reference
-  var output = document.getElementById("output");
-  // get action element reference
-  var action = document.getElementById("action");
-      // new speech recognition object
-      var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-      var recognition = new SpeechRecognition();
-  
-      // This runs when the speech recognition service starts
-      recognition.onstart = function() {
-          action.innerHTML = "<small>listening, please speak...</small>";
-      };
-      
-      recognition.onspeechend = function() {
-          action.innerHTML = "<small>stopped listening, hope you are done...</small>";
-          recognition.stop();
-      }
-    
-      // This runs when the speech recognition service returns result
-      recognition.onresult = function(event) {
-          var transcript = event.results[0][0].transcript;
-          var confidence = event.results[0][0].confidence;
-          output.innerHTML = "<b>Text:</b> " + transcript + "<br/> <b>Confidence:</b> " + confidence*100+"%";
-          output.classList.remove("hide");
-      };
-    
-       // start recognition
-       recognition.start();
-}
-//text to Speech
-//https://developers.google.com/web/updates/2014/01/Web-apps-that-talk-Introduction-to-the-Speech-Synthesis-API
-function Speech(say) {
-if ('speechSynthesis' in window && talking) {
-  var utterance = new SpeechSynthesisUtterance(say);
-  //msg.voice = voices[10]; // Note: some voices don't support altering params
-  //msg.voiceURI = 'native';
-  //utterance.volume = 1; // 0 to 1
-  //utterance.rate = 0.1; // 0.1 to 10
-  //utterance.pitch = 1; //0 to 2
-  utterance.text = say;
-  utterance.lang = 'en-US';
-  speechSynthesis.speak(utterance);
-}
-}
-
-//runs the keypress() function when a key is pressed
-document.onkeypress = keyPress;
-//if the key pressed is 'enter' runs the function newEntry()
-function keyPress(e) {
-var x = e || window.event;
-var key = (x.keyCode || x.which);
-if (key == 13 || key == 3) {
-  //runs this function when enter is pressed
-  const token= $('input[name="csrfmiddlewaretoken"]').attr('value');
-  const chat=$('input[name="chat"]').val();
-  console.log("token",token)
-  console.log("chat",chat)
-  
-  $.ajax({
-	  url: '/all/predict_chat',
-	  type:'POST',
-	  data: {
-	  operation: chat,
-	  'csrfmiddlewaretoken':token,
-	},
-	}).done(function(data) {
-		console.log("hello")
-		//let data = JSON.parse(data);
-		console.log(data)
-	//	$('#operation-container').html(data.eqt);
-	//	$('#solution-container').html(data.ans);
-     ans=data.ans
-     lastUserMessage = document.getElementById("chatbox").value;
-    //sets the chat box to be clear
-    document.getElementById("chatbox").value = "";
-    //adds the value of the chatbox to the array messages
-    messages.push("<b>You:</b> " +lastUserMessage);
-    //Speech(lastUserMessage);  //says what the user typed outloud
-    //sets the variable botMessage in response to lastUserMessage
-    //chatbotResponse();
-    console.log("ans hello",messages)
-    botMessage=ans
-    //add the chatbot's name and message to the array messages
-    messages.push("<b>" + botName + ":</b> " + botMessage);
-    // says the message using the text to speech function written below
-    //Speech(botMessage);
-    //outputs the last few array elements of messages to html
-    for (var i = 1; i < 30; i++) {
-      if (messages[messages.length - i])
-        document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
-    }
-    }).fail(function(XMLHttpRequest, textStatus, errorThrown) {
-      alert("Please enter a valid expression...");
-    })
-  //newEntry(ans);
-}
-if (key == 38) {
-  console.log('hi')
-    //document.getElementById("chatbox").value = lastUserMessage;
-}
-}
-
-//clears the placeholder text ion the chatbox
-//this function is set to run when the users brings focus to the chatbox, by clicking on it
-function placeHolder() {
-document.getElementById("chatbox").placeholder = "";
-}
-</script>
+  <section class="ftco-section img bg-hero" style="background-color: #172244;">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Please fill all symptoms that you feel and leave other symptoms blank.</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-11">
+					<div class="wrapper">
+						
+							</div>
+							<div class="col-lg-12">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<!-- <h3 class="mb-4">Enter Symptoms</h3> -->
+									<!-- <div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div> -->
+									<form method="POST" id="contactForm" name="contactForm" >
+                    {% csrf_token %}
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 1" id="name" placeholder="Symptom 1">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 2" id="name" placeholder="Symptom 2">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 3" id="name" placeholder="Symptom 3">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 4" id="name" placeholder="Symptom 4">
+												</div>
+											</div>
+                      <div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 5" id="name" placeholder="Symptom 5">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 6" id="name" placeholder="Symptom 6">
+												</div>
+											</div>
+                      <div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 7" id="name" placeholder="Symptom 7">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 8" id="name" placeholder="Symptom 8">
+												</div>
+											</div>
+                      <div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 9" id="name" placeholder="Symptom 9">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 10" id="name" placeholder="Symptom 10">
+												</div>
+											</div>
+                      <div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 11" id="name" placeholder="Symptom 11">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Symptom 12" id="name" placeholder="Symptom 12">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Predict" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 <footer id="footer" style="margin-top:30px">
   <div class="top-footer">
     <div class="container">
@@ -400,6 +335,11 @@ document.getElementById("chatbox").placeholder = "";
   </div>
 </footer>
 <!--/ footer-->
+<script src="{% static 'form/js/jquery.min.js' %}"></script>
+  <script src="{% static 'form/js/popper.js' %}"></script>
+  <script src="{% static 'form/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'form/js/jquery.validate.min.js' %}"></script>
+  <script src="{% static 'form/js/main.js' %}"></script>
 <script src="{% static 'homepage/vendor/jquery/jquery.min.js' %}"></script>
 <script src="{% static 'homepage/js/jquery.min.js' %}"></script>
 <script src="{% static 'homepage/js/jquery.easing.min.js' %}"></script>

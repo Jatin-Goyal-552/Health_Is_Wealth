@@ -42,13 +42,16 @@ def clean(text):
     return text
 
 def clean_up_sentence(sentence):
-    ignore_words=['covid','corona','covid-19','19','breastfeed','newborn','unborn','viruses','viruse','varient']
-
+    ignore_words=['breastfeed','newborn','unborn','viruses','viruse','varient']
+    same = ['covid','corona','covid-19','19',]
     lemmatizer = WordNetLemmatizer()
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words2=[]
     for a in sentence_words:
-        if a.lower() not in ignore_words:
+        if a.lower() in same:
+            sentence_words2.append('covid 19')
+            sentence_words2.append('covid')
+        elif a.lower() not in ignore_words:
             sentence_words2.append(str(TextBlob(a).correct()))
         else:
             sentence_words2.append(a)
@@ -115,7 +118,6 @@ def predict_chat(request):
         print('hello')
         chat=request.POST['operation']
         pred,tag=chatbot_response(chat)
-        # pred,tag=chatbot_response(chat)
     return HttpResponse(json.dumps({'ans':pred}), content_type="application/json")
 
 def xray(request):
@@ -128,7 +130,6 @@ def xray(request):
             form.save()
         else:
             print(form.errors)
-        # url=str(form.image)
         url=str(form.cleaned_data["image"])
         print("url",url)
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -149,11 +150,7 @@ def xray(request):
             prediction="This X-ray is Covid Positive."
         corona = corona_xray.objects.all()
         sorted_xray= corona_xray.objects.order_by('corona_id').reverse()
-        print("*****************************") 
-        print("sorted",sorted_xray[0].corona_id)
-        print("nnnnn")
         last=sorted_xray[0].corona_id
         xray=corona.filter(corona_id=last)
-        print("mri",xray)
         return render(request, 'corona_xray_result.html',{"prediction": prediction,"xray":xray})
     return render(request,'corona_Xray_form.html',{"form": form})
